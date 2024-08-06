@@ -305,7 +305,7 @@ impl ConfigurationOptions {
             Utf8Path::new(if cfg!(windows) {
                 ".turbo\\cache"
             } else {
-                ".cache/turbo"
+                ".turbo/cache"
             })
         })
     }

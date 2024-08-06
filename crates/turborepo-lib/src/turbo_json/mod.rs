@@ -136,7 +136,7 @@ pub struct RawTurboJson {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub env_mode: Option<EnvMode>,
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub cache_dir: Option<UnescapedString>,
+    pub cache_dir: Option<Spanned<UnescapedString>>,
 
     #[deserializable(rename = "//")]
     #[serde(skip)]
