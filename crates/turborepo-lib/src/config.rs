@@ -302,11 +302,7 @@ impl ConfigurationOptions {
 
     pub fn cache_dir(&self) -> &Utf8Path {
         self.cache_dir.as_deref().unwrap_or_else(|| {
-            Utf8Path::new(if cfg!(windows) {
-                ".turbo\\cache"
-            } else {
-                ".turbo/cache"
-            })
+            Utf8Path::from_iter([".turbo", "cache"])
         })
     }
 }
