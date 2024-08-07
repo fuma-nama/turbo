@@ -95,10 +95,10 @@ No cacheDir by default
   $ ${TURBO} config | jq .cacheDir
   ".turbo/cache"
 
-Add env var: `TURBO_CACHE_DIR=/nebulo9`
-  $ TURBO_CACHE_DIR=/nebulo9 ${TURBO} config | jq .cacheDir
-  "/nebulo9"
+Add env var: `TURBO_CACHE_DIR`
+  $ TURBO_CACHE_DIR=nebulo9 ${TURBO} config | jq .cacheDir
+  "nebulo9"
 
-Add flag: `--cache-dir /nebulo9`
-  $ ${TURBO} --cache-dir /nebulo9 config | jq .cacheDir
-  "/nebulo9"
+Add flag: `--cache-dir`
+  $ ${TURBO} --cache-dir nebulo9 config | jq .cacheDir
+  "nebulo9"
